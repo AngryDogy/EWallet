@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  ewallet:
+    image: ewallet
+    ports:
+      - 8080:8080
+    environment:
+      - PQ_USERNAME=postgres
+      - PQ_PASSWORD=postgres
+      - PQ_HOST=postgres
+      - PQ_PORT=5432
+      - PQ_DBNAME=postgres
+      - SERVER_PORT=0.0.0.0:8080
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
