@@ -36,8 +36,8 @@ func main() {
 
 	router := gin.Default()
 	router.POST("/api/v1/wallet", handlers.PostNewWallet)
-	router.POST("/api/v1/:id/send", handlers.PostSendMoney)
-	router.GET("/api/v1/:id/history", handlers.GetTransactionHistory)
+	router.POST("/api/v1/wallet/:id/send", handlers.PostSendMoney)
+	router.GET("/api/v1/wallet/:id/history", handlers.GetTransactionHistory)
 	router.GET("/api/v1/wallet/:id", handlers.GetWallet)
 	router.Run(os.Getenv("SERVER_PORT"))
 }
