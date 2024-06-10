@@ -4,9 +4,11 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
+
+	"infotecs/models"
+
 	"github.com/google/uuid"
 	_ "github.com/lib/pq"
-	"infotecs/internal/models"
 )
 
 type Repository interface {

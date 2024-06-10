@@ -1,13 +1,15 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
-	"infotecs/internal/handlers"
-	"infotecs/internal/repository"
-	"infotecs/internal/service"
 	"log"
 	"os"
+
+	"infotecs/handlers"
+	"infotecs/repository"
+	"infotecs/service"
+
+	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 func main() {

@@ -4,12 +4,14 @@ import (
 	"database/sql"
 	"encoding/json"
 	"errors"
-	"github.com/gin-gonic/gin"
-	"infotecs/internal/models"
-	"infotecs/internal/service"
 	"io"
 	"net/http"
 	"time"
+
+	"infotecs/models"
+	"infotecs/service"
+
+	"github.com/gin-gonic/gin"
 )
 
 func PostNewWallet(c *gin.Context) {

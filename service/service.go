@@ -1,6 +1,8 @@
 package service
 
-import "infotecs/internal/repository"
+import (
+	"infotecs/repository"
+)
 
 type DatabaseService struct {
 	Repository repository.Repository
